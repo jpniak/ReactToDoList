@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ListLink from '../ListLink/ListLink.js';
 import Search from '../Search/SearchContainer.js';
 
+
 class Home extends React.Component {
   static propTypes = {
     title: PropTypes.node,
@@ -19,7 +20,6 @@ class Home extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
-        <Search />
         {lists.map(listData => (
           <ListLink key={listData.id} {...listData} />
         ))}
